@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menuItemWidth">30dp</dimen>
+    <dimen name="menuItemHeight">35dp</dimen>
+    <dimen name="menuItemTextSize">20sp</dimen>
+</resources>

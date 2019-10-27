@@ -18,5 +18,6 @@ object Versions {
 	const val constraintLayout = "1.1.3"
 	const val viewModelVersion = "2.0.0"
 	const val coroutineVersion = "1.3.0-RC"
+	const val androidXLegacyVersion = "1.0.0"
 	const val viewmodel_coreVersion = "2.2.0-alpha02"
 }

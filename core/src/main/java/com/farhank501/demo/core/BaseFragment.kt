@@ -1,5 +1,19 @@
 package com.farhank501.demo.core
 
+import android.os.Bundle
+import androidx.lifecycle.ViewModelProviders
 import dagger.android.support.DaggerFragment
+import javax.inject.Inject
 
-abstract class BaseFragment : DaggerFragment()
+abstract class BaseFragment : DaggerFragment() {
+	@Inject
+	lateinit var navigationViewModeFactory: NavigationViewModel.NavigationViewModelFactory
+	lateinit var navigationViewModel: NavigationViewModel
+
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+
+		navigationViewModel =
+			ViewModelProviders.of(this, navigationViewModeFactory)[NavigationViewModel::class.java]
+	}
+}

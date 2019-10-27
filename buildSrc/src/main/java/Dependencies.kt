@@ -12,6 +12,7 @@ object Dependencies {
 	const val appcompat = "androidx.appcompat:appcompat:${Versions.androidXVersion}"
 	const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 	const val support_design = "com.google.android.material:material:${Versions.material}"
+	const val androidx_legacy = "androidx.legacy:legacy-support-v4:${Versions.androidXLegacyVersion}"
 
 	// view models
 	const val viewmodel_compiler = "androidx.lifecycle:lifecycle-compiler:${Versions.viewModelVersion}"
