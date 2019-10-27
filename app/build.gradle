@@ -38,6 +38,7 @@ dependencies {
 	implementation Dependencies.multiDex
 	implementation Dependencies.appcompat
 	implementation Dependencies.constraintLayout
+	implementation Dependencies.fragmentNavigation
 
 	testImplementation Dependencies.junit
 	androidTestImplementation Dependencies.espresso
