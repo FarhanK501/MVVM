@@ -31,6 +31,7 @@ apply from: '../dependencies/viewmodel.gradle'
 dependencies {
 	api project(Modules.di)
 
+	implementation Dependencies.fragmentNavigation
 	implementation Dependencies.multiDex
 	implementation Dependencies.support_design
 	implementation Dependencies.appcompat

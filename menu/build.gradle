@@ -1,19 +1,19 @@
-apply plugin: 'com.android.application'
+apply plugin: Plugins.androidLibrary
 apply plugin: Plugins.kotlinAndroid
 apply plugin: Plugins.KotlinExt
 apply plugin: Plugins.ktKapt
 
 android {
 	compileSdkVersion Versions.compileSdkVersion
+
+
 	defaultConfig {
-		applicationId "com.farhank501.demo.yourpersonalnotes"
 		minSdkVersion Versions.minSdkVersion
 		targetSdkVersion Versions.targetSdkVersion
 		versionCode Versions.versionCode
 		versionName Versions.versionName
-		testInstrumentationRunner Dependencies.xJunitRunner
 
-		multiDexEnabled true
+		testInstrumentationRunner Dependencies.xJunitRunner
 	}
 
 	buildTypes {
@@ -30,16 +30,17 @@ apply from: '../dependencies/viewmodel.gradle'
 
 dependencies {
 	implementation project(Modules.core)
-	implementation project(Modules.menu)
 	implementation project(Modules.daos)
 	implementation project(Modules.common)
-	implementation project(Modules.splash)
 
-	implementation Dependencies.multiDex
 	implementation Dependencies.appcompat
 	implementation Dependencies.constraintLayout
+	implementation Dependencies.support_design
+	implementation Dependencies.androidx_legacy
 
+	implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 	testImplementation Dependencies.junit
-	androidTestImplementation Dependencies.espresso
+	testImplementation Dependencies.mockito
 	androidTestImplementation Dependencies.testRunner
+	androidTestImplementation Dependencies.espresso
 }
