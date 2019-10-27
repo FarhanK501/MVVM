@@ -3,10 +3,20 @@ package com.farhank501.demo.yourpersonalnotes.ui
 import android.content.Intent
 import android.os.Bundle
 import androidx.core.content.ContextCompat.startActivity
+import androidx.fragment.app.Fragment
 import com.farhank501.demo.core.BaseActivity
+import com.farhank501.demo.menu.NotesMenuFragment
 import com.farhank501.demo.yourpersonalnotes.R
+import com.ncapdevi.fragnav.FragNavController
 
-class YourPersonalNotesActivity : BaseActivity() {
+class YourPersonalNotesActivity : BaseActivity(), FragNavController.RootFragmentListener {
+	override val numberOfRootFragments: Int
+		get() = 1
+
+	override fun getRootFragment(index: Int): Fragment {
+		//TODO - add a when clause and return respective fragments
+		return NotesMenuFragment.newInstance()
+	}
 
 	companion object {
 		fun startYourPersonalNotesActivity(activity: BaseActivity) {
