@@ -1,6 +1,7 @@
 @Suppress("unused", "SpellCheckingInspection")
 object Versions {
 
+	const val junit = "4.12"
 	const val versionCode = 1
 	const val gradle = "3.4.1"
 	const val dagger = "2.23.2"
@@ -10,7 +11,6 @@ object Versions {
 	const val minSdkVersion = 21
 	const val versionName = "1.0"
 	const val testRunner = "1.2.0"
-	const val junitVersion = "4.12"
 	const val targetSdkVersion = 29
 	const val compileSdkVersion = 29
 	const val kotlin_version = "1.3.50"

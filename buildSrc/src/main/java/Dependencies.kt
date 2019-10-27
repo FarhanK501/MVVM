@@ -3,7 +3,7 @@ import Versions.kotlin_version
 @Suppress("unused", "SpellCheckingInspection")
 object Dependencies {
 
-	const val junit = "junit:junit:${Versions.junitVersion}"
+	const val junit = "junit:junit:${Versions.junit}"
 	const val testRunner = "androidx.test:runner:${Versions.testRunner}"
 	const val ktCore = "androidx.core:core-ktx:${Versions.androidXVersion}"
 	const val multiDex = "com.android.support:multidex:${Versions.multiDex}"
