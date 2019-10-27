@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">splash</string>
+    <string name="mvvm_multi_module">MVVM Multi Module</string>
+</resources>

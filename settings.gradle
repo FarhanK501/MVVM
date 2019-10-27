@@ -1,0 +1,2 @@
+include ':app', ':splash', ':daos', ':di', ':core', ':utilities', ':repository', ':common'
+rootProject.name = 'Your Personal Notes'

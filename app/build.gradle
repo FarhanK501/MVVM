@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+apply plugin: Plugins.kotlinAndroid
+apply plugin: Plugins.KotlinExt
+apply plugin: Plugins.ktKapt
+
+android {
+	compileSdkVersion Versions.compileSdkVersion
+	defaultConfig {
+		applicationId "com.farhank501.demo.yourpersonalnotes"
+		minSdkVersion Versions.minSdkVersion
+		targetSdkVersion Versions.targetSdkVersion
+		versionCode Versions.versionCode
+		versionName Versions.versionName
+		testInstrumentationRunner Dependencies.xJunitRunner
+
+		multiDexEnabled true
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+	}
+}
+
+apply from: '../dependencies/dagger.gradle'
+apply from: '../dependencies/kotlin.gradle'
+apply from: '../dependencies/viewmodel.gradle'
+
+dependencies {
+	implementation project(Modules.core)
+	implementation project(Modules.daos)
+	implementation project(Modules.common)
+	implementation project(Modules.splash)
+
+	implementation Dependencies.multiDex
+	implementation Dependencies.appcompat
+	implementation Dependencies.constraintLayout
+
+	testImplementation Dependencies.junit
+	androidTestImplementation Dependencies.espresso
+	androidTestImplementation Dependencies.testRunner
+}

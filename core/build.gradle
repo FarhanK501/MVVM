@@ -1,0 +1,39 @@
+apply plugin: Plugins.androidLibrary
+apply plugin: Plugins.kotlinAndroid
+apply plugin: Plugins.KotlinExt
+apply plugin: Plugins.ktKapt
+
+android {
+	compileSdkVersion Versions.compileSdkVersion
+
+	defaultConfig {
+		minSdkVersion Versions.minSdkVersion
+		targetSdkVersion Versions.targetSdkVersion
+		versionCode Versions.versionCode
+		versionName Versions.versionName
+
+		testInstrumentationRunner Dependencies.xJunitRunner
+		multiDexEnabled true
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+	}
+}
+
+apply from: '../dependencies/dagger.gradle'
+apply from: '../dependencies/kotlin.gradle'
+apply from: '../dependencies/viewmodel.gradle'
+
+dependencies {
+	api project(Modules.di)
+
+	implementation Dependencies.multiDex
+	implementation Dependencies.support_design
+	implementation Dependencies.appcompat
+	testImplementation Dependencies.junit
+	androidTestImplementation Dependencies.testRunner
+}

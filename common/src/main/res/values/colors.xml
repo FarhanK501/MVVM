@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/cyan</color>
+    <color name="colorPrimaryDark">@color/cyan</color>
+    <color name="colorAccent">@color/cyan</color>
+    <color name="cyan">#00B2A9</color>
+</resources>

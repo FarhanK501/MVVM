@@ -1,0 +1,5 @@
+dependencies {
+    implementation Dependencies.viewmodel_extension
+    implementation Dependencies.viewmodel_core
+    kapt Dependencies.viewmodel_compiler
+}
