@@ -18,7 +18,3 @@ allprojects {
 		maven(url = "https://maven.google.com")
 	}
 }
-
-//task<Delete>("clean") {
-//    delete(rootProject.buildDir)
-//}
