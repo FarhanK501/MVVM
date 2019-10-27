@@ -1,9 +1,11 @@
 import Versions.kotlin_version
+import Versions.navigation
 
 @Suppress("unused", "SpellCheckingInspection")
 object Dependencies {
 
 	const val junit = "junit:junit:${Versions.junit}"
+	const val fragmentNavigation = "com.ncapdevi:frag-nav:$navigation"
 	const val testRunner = "androidx.test:runner:${Versions.testRunner}"
 	const val ktCore = "androidx.core:core-ktx:${Versions.androidXVersion}"
 	const val multiDex = "com.android.support:multidex:${Versions.multiDex}"
@@ -13,7 +15,6 @@ object Dependencies {
 	const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 	const val support_design = "com.google.android.material:material:${Versions.material}"
 	const val androidx_legacy = "androidx.legacy:legacy-support-v4:${Versions.androidXLegacyVersion}"
-
 	// view models
 	const val viewmodel_compiler = "androidx.lifecycle:lifecycle-compiler:${Versions.viewModelVersion}"
 	const val viewmodel_extension = "androidx.lifecycle:lifecycle-extensions:${Versions.viewModelVersion}"

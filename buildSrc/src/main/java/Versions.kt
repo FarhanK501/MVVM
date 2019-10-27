@@ -10,6 +10,7 @@ object Versions {
 	const val material = "1.0.0"
 	const val minSdkVersion = 21
 	const val versionName = "1.0"
+	const val navigation = "3.2.0"
 	const val testRunner = "1.2.0"
 	const val targetSdkVersion = 29
 	const val compileSdkVersion = 29

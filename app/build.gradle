@@ -30,6 +30,7 @@ apply from: '../dependencies/viewmodel.gradle'
 
 dependencies {
 	implementation project(Modules.core)
+	implementation project(Modules.menu)
 	implementation project(Modules.daos)
 	implementation project(Modules.common)
 	implementation project(Modules.splash)
