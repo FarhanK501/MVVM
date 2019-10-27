@@ -27,8 +27,6 @@ android {
 apply from: '../dependencies/dagger.gradle'
 apply from: '../dependencies/kotlin.gradle'
 apply from: '../dependencies/viewmodel.gradle'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 dependencies {
 	implementation project(Modules.core)
@@ -42,6 +40,7 @@ dependencies {
 
 	implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 	testImplementation Dependencies.junit
+	testImplementation Dependencies.mockito
 	androidTestImplementation Dependencies.testRunner
 	androidTestImplementation Dependencies.espresso
 }

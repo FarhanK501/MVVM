@@ -35,4 +35,5 @@ object Dependencies {
 	const val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
 	// others
 	const val xJunitRunner = "androidx.test.runner.AndroidJUnitRunner"
+	const val mockito = "org.mockito:mockito-core:3.0.0"
 }
