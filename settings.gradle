@@ -1,2 +1,10 @@
-include ':app', ':splash', ':daos', ':di', ':core', ':utilities', ':repository', ':common'
+include ':app',
+		Modules.di,
+		Modules.daos,
+		Modules.repo,
+		Modules.core,
+		Modules.utils,
+		Modules.common,
+		Modules.splash
+
 rootProject.name = 'Your Personal Notes'
