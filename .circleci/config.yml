@@ -24,12 +24,15 @@ jobs:
           name: Run Menu Unit Tests
           command: ./gradlew testDebugUnitTest
       - store_artifacts:
-          path: app/build/reports
+          path: app/build/reports/
+          destination: reports/
       - store_test_results:
           path: build/
+          destination: build/
       - run:
           name: Run Lint Test
           command: ./gradlew lint
       - store_artifacts:
           path: build/
+          destination: build/
       # See https://circleci.com/

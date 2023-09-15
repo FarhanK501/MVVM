@@ -9,6 +9,10 @@ import javax.inject.Inject
 
 class NotesMenuFragment : BaseMenuFragment() {
 
+	companion object {
+		fun newInstance() = NotesMenuFragment()
+	}
+
 	@Inject
 	internal lateinit var menuAdapter: MenuAdapter
 
